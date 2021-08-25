@@ -14,6 +14,8 @@ One of the features I have included is the ability to change the acceleration in
 change this, it is one of the options featured on the menu. Be sure to know that when you restart the program (exit and reenter, or turn Calculator off and back on)
 the acceleration will reset to 10 m/s^2. 
 
+Note that I will be taking AP Physics C this year and will most likely come out with a new calculator program that incorporates calculus. Stay tuned!
+
 If you have any questions or concerns with the program, don't hesitate to reach out at:
 
 zeke.sarosi@gmail.com
