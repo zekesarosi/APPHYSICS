@@ -1,6 +1,7 @@
 Hello fellow physics students!
 
-I wrote this program to assist with the AP Physics 1 Test. 
+I wrote this program to assist with the AP Physics 1 Test. This program can ONLY be run on the TI-84 Plus CE/ Silver Addition calculators. If you have a TI-84 Plus calculator I have a modified program for that model calculator.
+
 This program is capable of solving for variables in Kinematics, Energy/Work, Momentum/Impulse, Force, Projectile Motion, Center Of Mass. 
 On top of this you can do Vector Sums, and there is a short list of equations that are invaluable for the test but do not appear on the equation sheet.
 
