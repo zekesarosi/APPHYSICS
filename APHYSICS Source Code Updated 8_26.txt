@@ -1,0 +1,1033 @@
+ClrHome
+­10→G
+Degree
+MATHPRINT
+Und
+AUTO
+Real
+Func
+Goto 9Z
+Lbl 9Z
+Menu("What do you want?","Kinematics Solver",1,"Energy/Work Solver",2,"Projectile Motion",3A,"Forces Solver",3,"Momentum Solver",5,"More",8,"Change Gravity (g)",6,"Quit",7
+Lbl 6
+ClrHome
+Disp "Only Input Positive Value","---"
+Input "Input Value for g= ",M
+(abs((M)))→U
+(­U)→G
+Disp "One Sec..."
+Wait 1
+ClrHome
+Disp "All Set!","New (g)="
+Output(2,12,G)
+Output(3,16,"m/s²")
+Wait 2
+Goto 2D
+
+Lbl 8
+ClrHome
+Wait .2
+Menu("What do you want?","Center of M Calc",8A,"Equations",AA,"Back",2D
+Lbl AA
+Menu("Which one?","Atwood",AB,"KE and momentum",AC,"Vel at top of circle",AD,"Period in Circ Motion",AE,"Projectile Range",AF,"Angular vs Translational",AG,"Back",2D
+Lbl AG
+ClrHome
+Disp "θ=(x)/(r)","w=(v)/(r)","α=(a)/(r)"
+Pause 
+Goto 8
+Lbl AB
+ClrHome
+Disp "Accel =","(M-m)g/(M+m)"
+Pause 
+Goto 8
+Lbl AC
+ClrHome
+Disp "KE= p²/(2m)","KE equals momentum²","divided by twice the mass"
+Pause 
+Goto 8
+Lbl AD
+ClrHome
+Disp "V= √(gr)","At the top of loop","velocity = ","sqrt(grav*radius of circle)
+Pause 
+Goto 8
+Lbl AE
+ClrHome
+Disp "T= ((2πr)(v))","","Period of orbit:","circumfrence/velocity"
+Pause 
+Goto 8
+Lbl AF
+ClrHome
+Disp "No init height:","x=(v²sin(2θ))/g"
+Pause 
+Goto 8
+Lbl 8A
+ClrHome
+Disp "Only Works for 1 Direction.","if you want to use for","both x and y directions","then do this twice","once for only the x cords","and once for the y cords","that will give you (x,y)","'Enter' to Continue"
+Pause 
+Menu("How Many Masses?","One",8F,"Two",8E,"Three",8D,"Four",8B,"Five",8C,"Back",2D
+Lbl 8C
+ClrHome
+Input "Mag of Mass 1= ",A
+Input "Distance from 0= ",E
+Disp "---"
+Input "Mag of Mass 2= ",B
+Input "Distance from 0= ",F
+Disp "---"
+Input "Mag of Mass 3= ",C
+Input "Distance from 0= ",H
+Disp "---"
+Input "Mag of Mass 4= ",D
+Input "Distance from 0= ",I
+Disp "---"
+Input "Mag of Mass 5= ",M
+Input "Distance from 0= ",N
+((AE)+(BF)+(CH)+(DI)+(MN))→J
+(A+B+C+D+M)→K
+(J/K)→L
+Disp "-----","Center of Mass from 0",L
+Pause 
+Goto 8
+Lbl 8B
+ClrHome
+Input "Mag of Mass 1= ",A
+Input "Distance from 0= ",E
+Disp "---"
+Input "Mag of Mass 2= ",B
+Input "Distance from 0= ",F
+Disp "---"
+Input "Mag of Mass 3= ",C
+Input "Distance from 0= ",H
+Disp "---"
+Input "Mag of Mass 4= ",D
+Input "Distance from 0= ",I
+((AE)+(BF)+(CH)+(DI))→J
+(A+B+C+D)→K
+(J/K)→L
+Disp "-----","Center of Mass from 0",L
+Pause 
+Goto 8
+Lbl 8D
+ClrHome
+Input "Mag of Mass 1= ",A
+Input "Distance from 0= ",E
+Disp "---"
+Input "Mag of Mass 2= ",B
+Input "Distance from 0= ",F
+Disp "---"
+Input "Mag of Mass 3= ",C
+Input "Distance from 0= ",H
+((AE)+(BF)+(CH))→J
+(A+B+C)→K
+(J/K)→L
+Disp "-----","Center of Mass from 0",L
+Pause 
+Goto 8
+Lbl 8E
+ClrHome
+Input "Mag of Mass 1= ",A
+Input "Distance from 0= ",E
+Disp "---"
+Input "Mag of Mass 2= ",B
+Input "Distance from 0= ",F
+((AE)+(BF))→J
+(A+B)→K
+(J/K)→L
+Disp "-----","Center of Mass from 0",L
+Pause 
+Goto 8
+Lbl 8F
+ClrHome
+Input "Mag of Mass 1= ",A
+Input "Distance from 0= ",E
+((AE))→J
+(A)→K
+(J/K)→L
+Disp "-----","Center of Mass from 0",L
+Pause 
+Goto 8
+
+
+Lbl 7
+ClrDraw
+ClrHome
+Stop
+
+Lbl 1
+prgmKINEMATS
+
+Lbl 2
+Menu("What do you have?","Kinetic Energy?",2A,"GravPotential Energy?",2B,"SpringPotential Energy?",2C,"Work",A2,"Back",2D
+Lbl 2D
+Menu("What do you want?","Kinematics Solver",1,"Energy/Work Solver",2,"Projectile Motion",3A,"Forces Solver",3,"Momentum Solver",5,"More",8,"Change Gravity (g)",6,"Quit",7
+Lbl A2
+Menu("Solve For?","Energy",B2,"Applied F",C2,"Distance F is applied",D2,"Angle F is applied",E2,"Kinetic E",F2,"Grav-Poten E",G2,"Back",2D
+Lbl 5
+Menu("Momentum Solver","Colitions Calculator",5A,"Impulse Calculator",A5,"Back",2D
+Lbl A5
+Menu("Impulse","Basic Calculator",B5,"Impulse on an Object",C5
+Lbl C5
+ClrHome
+Disp "Impulse on an object"
+Wait 1
+ClrHome
+Input "Mass of Object= ",M
+Input "Force on that Object= ",F
+Input "Time force is applied= ",T
+(FT)→I
+Disp "---","Impulse on that object=",I
+((FT)/(M))→V
+Disp "-","Change in Velocity of M=",V
+Pause 
+Goto 2D
+Lbl B5
+ClrHome
+Disp "Basic Impulse Calculator"
+Wait 1
+ClrHome
+Input "Force= ",F
+Input "Time= ",T
+(FT)→P
+Disp "---","Change in momentum=",P
+Pause 
+Goto 2D
+Lbl 5A
+ClrHome
+Disp "Colitions Calculator!"
+Wait 1
+Menu("Solve For?","Mass",5C,"Velocity",5D,"Change in KE",5T,"Back",5
+Lbl 5D
+Menu("Stick Together or No?","Stick Together",5E,"Don't Stick Together",5F,"Back",5
+Lbl 5C
+Menu("Stick Together or No?","Stick Together",5N,"Don't Stick Together",5O,"Back",5
+Lbl 5E
+Menu("What are you solving for?","V₀ Object 1?",5G,"V₀ Object 2?",5H,"Final Velocity",5I,"Back",5
+Lbl 5F
+Menu("What are you solving for?","V₀ Object 1?",5J,"V₀ Object 2?",5K,"Final V of 1",5L,"Final V of 2",5M,"Back",5
+Lbl 5O
+Menu("What are you solving for?","Mass Object 1?",5R,"Mass Object 2?",5S,"Back",5A
+Lbl 5N
+Menu("What are you solving for?","Mass Object 1?",5P,"Mass Object 2?",5Q,"Back",5A
+
+Lbl 5T
+ClrHome
+Input "Mass 1= ",M
+Input "Mass 2= ",O
+Input "Initial V of Object 1= ",A
+Input "Initial V of Object 2= ",B
+Input "Final V of Object 1= ",C
+Input "Final V of Object 2= ",D
+(.5M(A²))→E
+(.5O(B²))→F
+(.5M(C²))→H
+(.5O(D²))→I
+(E+F)→J
+(H+I)→K
+(J-K)→O
+If O=0
+Then:
+Disp "---","Initial KE=",K,"Final KE=",J,"Colition is elastic!","---","Change in KE=",O
+Pause 
+Goto 2D
+Else:
+Disp "---","Initial KE=",K,"Final KE=",J,"Colition is inelastic!","---","Change in KE=",O
+Pause 
+Goto 2D
+
+Lbl 5R
+ClrHome
+Input "Mass 2= ",O
+Input "Object 1 Initial V= ",B
+Input "Object 2 Initial V= ",C
+Input "Object 1 Final V= ",D
+Input "Object 2 Final V= ",E
+(OE)→L
+(OC)→H
+(B-D)→K
+((L-H)/(K))→M
+Disp "---","Mass of Object 1",M
+Pause 
+Goto 2D
+Lbl 5S
+ClrHome
+Input "Mass 1= ",O
+Input "Object 2 Initial V= ",B
+Input "Object 1 Initial V= ",C
+Input "Object 2 Final V= ",D
+Input "Object 1 Final V= ",E
+(OE)→L
+(OC)→H
+(B-D)→K
+((L-H)/(K))→M
+Disp "---","Mass of Object 2",M
+Pause 
+Goto 2D
+
+Lbl 5P
+ClrHome
+Input "Mass 2= ",O
+Input "Object 1 Initial V= ",B
+Input "Object 2 Initial V= ",C
+Input "Final Velocity= ",D
+(OD)→L
+(OC)→H
+(B-D)→K
+((L-H)/(K))→M
+Disp "---","Mass of Object 1",M
+Pause 
+Goto 2D
+
+Lbl 5Q
+ClrHome
+Input "Mass 1= ",O
+Input "Object 2 Initial V= ",B
+Input "Object 1 Initial V= ",C
+Input "Final Velocity= ",D
+(OD)→L
+(OC)→H
+(B-D)→K
+((L-H)/(K))→M
+Disp "---","Mass of Object 2",M
+Pause 
+Goto 2D
+
+Lbl 5M
+ClrHome
+Input "Mass 2= ",M
+Input "Mass 1= ",O
+Input "Initial V of 2= ",S
+Input "Initial V of 1= ",Q
+Input "Final V of 1= ",K
+(MS)→A
+(OQ)→B
+(KO)→C
+(A+B-C)→E
+(E/M)→V
+(.5M(V²))→E
+(.5O(K²))→F
+(.5M(S²))→H
+(.5O(Q²))→I
+(E+F)→J
+(H+I)→K
+(J-K)→O
+Disp "--","Final V of Object 2",V,"--","Change in KE=",O
+Pause 
+Goto 2D
+
+
+Lbl 5J
+ClrHome
+Input "Mass 1= ",M
+Input "Mass 2= ",O
+Input "Initial V of 2= ",Q
+Input "Final V of 1= ",S
+Input "Final V of 2= ",K
+(SM)→A
+(KO)→B
+(OQ)→C
+(A+B+C)→E
+(E/M)→V
+(.5M(S²))→E
+(.5O(K²))→F
+(.5M(V²))→H
+(.5O(Q²))→I
+(E+F)→J
+(H+I)→K
+(J-K)→O
+Disp "--","Initial V of Object 1",V,"---","Change in KE=",O
+Pause 
+Goto 2D
+
+Lbl 5K
+ClrHome
+Input "Mass 1= ",O
+Input "Mass 2= ",M
+Input "Initial V of 1= ",Q
+Input "Final V of 1= ",K
+Input "Final V of 2= ",S
+(SM)→A
+(KO)→B
+(OQ)→C
+(A+B+C)→E
+(E/M)→V
+(.5M(S²))→E
+(.5O(K²))→F
+(.5M(V²))→H
+(.5O(Q²))→I
+(E+F)→J
+(H+I)→K
+(J-K)→O
+Disp "--","Initial V of Object 2",V,"---","Change in KE=",O
+Pause 
+Goto 2D
+
+
+Lbl 5L
+ClrHome
+Input "Mass 1= ",M
+Input "Mass 2= ",O
+Input "Initial V of 1= ",S
+Input "Initial V of 2= ",Q
+Input "Final V of 2= ",K
+(MS)→A
+(OQ)→B
+(KO)→C
+(A+B-C)→E
+(E/M)→V
+(.5M(V²))→E
+(.5O(K²))→F
+(.5M(S²))→H
+(.5O(Q²))→I
+(E+F)→J
+(H+I)→K
+(J-K)→O
+Disp "--","Final V of Object 1",V,"---","Change in KE=",O
+Pause 
+Goto 2D
+
+Lbl 5G
+ClrHome
+Input "Object 1 Mass= ",R
+Input "Object 2 Mass= ",M
+Input "V₀ Object 2= ",I
+Input "Final V= ",O
+(M+R)→U
+(MI)→S
+((OU)-(S))→H
+(H/R)→V
+(.5M(O²))→E
+(.5R(O²))→F
+(.5M(I²))→H
+(.5R(V²))→I
+(E+F)→J
+(H+I)→K
+(J-K)→O
+Disp "Initial V of Object 1=",V,"---","Change in KE=",O
+Pause 
+Goto 2D
+Lbl 5H
+ClrHome
+Input "Object 1 Mass= ",M
+Input "Object 2 Mass= ",R
+Input "V₀ Object 1= ",I
+Input "Final V= ",O
+(M+R)→U
+(MI)→S
+((OU)-(S))→H
+(H/R)→V
+(.5M(O²))→E
+(.5R(O²))→F
+(.5M(I²))→H
+(.5R(V²))→I
+(E+F)→J
+(H+I)→K
+(J-K)→O
+Disp "Initial V of Object 2=",V,"---","Change in KE=",O
+Pause 
+Goto 2D
+Lbl 5I
+ClrHome
+Input "Mass 1= ",M
+Input "Mass 2= ",R
+Input "V₀ Object 1= ",I
+Input "V₀ Object 2= ",S
+(M+R)→J
+(MI)→L
+(RS)→P
+(L+P)→Z
+(Z/J)→V
+(.5M(V²))→E
+(.5R(V²))→F
+(.5M(I²))→H
+(.5R(S²))→I
+(E+F)→J
+(H+I)→K
+(J-K)→O
+Disp "Final Velocity=",V,"---","Change in KE=",O
+Pause 
+Goto 2D
+
+Lbl B2
+ClrHome
+Input "Initial E= ",Y
+Input "Mag. of F= ",F
+Input "θ F is applied= ",θ
+Input "Distance F is applied= ",D
+((Y)+(FDcos(θ))→E
+Disp "Change in Energy (J)",E,"Saved as Var 'E'"
+Pause 
+Goto 2D
+Lbl C2
+ClrHome
+Input "E= ",E
+Input "Distance F is applied= ",D
+Input "Angle F is applied= ",θ
+((E)/(Dcos(θ)))→F
+Disp "Mag. of applied F(N)",F
+Pause 
+Goto 2D
+Lbl D2
+ClrHome
+Input "E= ",E
+Input "Mag. F applied= ",D
+Input "Angle F is applied= ",θ
+((E)/(Fcos(θ)))→D
+Disp "Distance F is applied (m)",D
+Pause 
+Goto 2D
+Lbl E2
+ClrHome
+Input "E= ",E
+Input "Mag. F applied= ",D
+Input "Dist. F is applied= ",D
+((E)/(FD))→Y
+(cos(Y))→θ
+Disp "Angle F is applied (deg)",θ
+Pause 
+Goto 2D
+Lbl F2
+ClrHome
+Menu("Solve for?","Mass",H2,"Velocity",I2,"Back",A2
+Lbl H2
+ClrHome
+Input "E= ",Y
+Input "Final Velocity= ",V
+((2Y)/(V²))→M
+Disp "Mass of Object(kg)",M
+Pause 
+Goto 2D
+Lbl I2
+ClrHome
+Input "E= ",E
+Input "Mass= ",M
+(2E)→J
+(J/M)→Q
+(√(Q))→V
+Disp "Vel. of Object(m/s)",V
+Pause 
+Goto 2D
+Lbl G2
+Menu("Solve For?","Mass",J2,"Height",K2,"Back",A2
+Lbl J2
+ClrHome
+Input "Energy= ",E
+Input "Height Above 0=",H
+(­G)→R
+((E)/(RH))→M
+Disp "---","Mass= ",M
+Pause 
+Goto 2D
+Lbl K2
+(­G)→R
+ClrHome
+Input "Energy= ",E
+Input "Mass= ",M
+((E)/(RM))→H
+Disp "---","Height= ",H
+Pause 
+Goto 2D
+Lbl 2A
+ClrHome
+0→Z
+0→M
+0→V
+0→K
+Disp "If you don't know KE but","know m and v","then put 0 when asked"," "
+Input "KE(J)= ",Z
+If Z≠0
+Then:
+Z→K
+Disp "KE=",K
+Wait 1
+Menu("What do you want to convrt to?","Force",2O,"Spring Compression",2P,"Height",2Q,"Back",2D
+Else:
+Input "Mass= ",M
+Input "Velocity= ",V
+(.5M(V^2))→K
+Disp "Calculated KE=",K,"Enter to continue"
+Pause 
+Menu("What do you want to convrt to?","Force",2O,"Spring Compression",2P,"Height",2Q,"Back",2D
+Lbl 2O
+Menu("Solve for?","Applied Force",2R,"Angle Force is applied?",2S,"Distance F Applied",2T,"Back",2D
+
+Lbl 2R
+ClrHome
+Input "Anlge force was applied= ",θ
+Input "Dist F was applied= ",D
+(K/(Dcos(θ))→F
+Disp "------------------------------","Applied force=",F
+Pause 
+Goto 2D
+Lbl 2S
+ClrHome
+Input "Dist F was applied= ",D
+Input "Magnitude of Force= ",F
+cos(K/(FD))→θ
+Disp "------------------------------","Angle Force was applied",θ
+Pause 
+Goto 2D
+Lbl 2T
+ClrHome
+Input "Anlge force was applied= ",θ
+Input "Magnitude of Force= ",F
+(K/(Fcos(θ))→D
+Disp "------------------------------","Force was applied for=",D,"meters"
+Pause 
+Goto 2D
+
+Lbl 2P
+Menu("Solve for?","Spring Constant",2U,"Stretch Length",2V,"Back",2D
+Lbl 2U
+ClrHome
+Input "Stretch Length= ",X
+((2K)/(X^2))→C
+Disp "------------------------------","Spring Constant=",C
+Pause 
+Goto 2D
+Lbl 2V
+ClrHome
+Input "Spring Constant.= ",C
+√((K/C))→X
+(­X)→Y
+Disp "------------------------------","Stretch Lengths=",X,"Or",Y
+Pause 
+Goto 2D
+
+Lbl 2Q
+If Z=0
+Then:((K)/(M(­G)))→H
+Disp "------------------------------","Height=",H,"meters"
+Pause 
+Goto 2D
+Else:
+Input "Mass= ",M
+((K)/(M(­G)))→H
+Disp "------------------------------","Height=",H,"meters"
+Pause 
+Goto 2D
+End
+
+Lbl 2B
+ClrHome
+Disp "Calculate Grav-Potential","---","If you don't know amount","of Grav-Poten then:","Type 0"
+Input "Grav-Potential= ",Z
+If Z=0
+Then:
+Input "Mass= ",M
+Input "Height Above 0= ",H
+((M)(­G)(H))→U
+Disp "Calculated U=",U," ","Enter to continue"
+Pause 
+Menu("Convert to?","Kinetic",2N,"Spring",2M,"Force/Work",2L,"Back",2D
+Else:
+ClrHome
+Z→U
+Disp "U=",U
+Pause 
+Menu("Convert to?","Kinetic",2N,"Spring",2M,"Force/Work",2L,"Back",2D
+
+Lbl 2N
+If Z=0
+Then:
+ClrHome
+Disp "Solving for Velocity","----"
+Disp "Input Change of Height"
+Input "H= ",L
+((U)-((M)(­G)(H-L)))→X
+√((2X)/(M))→V
+ClrHome
+Disp "This will result in a","positive velocity..."
+Wait .5
+Disp "Be careful of the sign","----","Velocity =",V
+Pause 
+Goto 2D
+Else:
+Disp "I need to know mass"
+Wait .5
+Input "Mass= ",M
+√(2U/M)→V
+ClrHome
+Disp "This will result in a","positive velocity..."
+Wait .5
+Disp "Be careful of the sign","----","Velocity =",V
+Pause 
+Goto 2D
+
+Lbl 2M
+Menu("Spring Stuff","Spring Constant",2K,"Displacement from Equilibrium",2J,"Back",2D
+Lbl 2K
+ClrHome
+Input "Spring Displacement(x)= ",X
+((2U)/(X^2))→C
+Wait .5
+Disp "Spring Constant=",C
+Pause 
+Goto 2D
+Lbl 2J
+ClrHome
+Input "Spring Constant= ",C
+(√((2U)/(C))→X
+­(√((2U)/(C))→Y
+Disp "Displacement of Spring= ",X,"or",Y
+Pause 
+Goto 2D
+
+Lbl 2C
+Menu("Solve For?","Spring Poten. Calc",9D,"Max Height",9A,"Velocity",9B,"Back",2D
+Lbl 9A
+ClrHome
+Input "Spring Poten. E= ",U
+Input "Mass of Object= ",M
+((U)/((M)(­G)))→H
+Disp "Max Height=",H
+Pause 
+Goto 2D
+Lbl 9D
+ClrHome
+Menu("Solve For?","Spring Potential",9F,"Spring Constant",9E,"Displacement from Equil.",9G
+Lbl 9F
+ClrHome
+Input "Spring Constant",K
+Input "Displacement from 0= ",X
+((.5)(K)(X²))→U
+Disp "Spring Potential E=",U,"Saved as Var 'U'"
+Pause 
+Goto 2D
+Lbl 9E
+ClrHome
+Input "Spring Poten E= ",U
+Input "Displacement from Equil= ",X
+((2U)/(X²))→K
+Disp "Spring Constant",K
+Pause 
+Goto 2D
+Lbl 9G
+ClrHome
+Input "Spring Potent E= ",U
+Input "Spring Constant= ",C
+(√(((2U)/(C)))→X
+(­X)→Y
+Disp "Displacement from 0=",X,"or",Y
+Pause 
+Goto 2D
+Lbl 9B
+ClrHome
+Input "Spring Poten. E= ",U
+Input "Object Mass =",M
+(√(2U/M))→V
+Disp "Velocity is",V
+Pause 
+Goto 2D
+Lbl 9C
+ClrHome
+(­G)→R
+Input "Spring Poten. E= ",U
+Input "Object Mass = ",M
+(U/MR)→H
+Disp "Height is",H
+Pause 
+Goto 2D
+
+Lbl 2L
+Menu("Solve for","θ of Applied Force",2I,"Magnitude of Force",2H,"Distance of Applied F",2G,"Back",2D
+Lbl 2I
+ClrHome
+Input "Distance F is Applied= ",X
+Input "Mag. of Applied F= ",F
+(cos((U)/((F)(D)))→θ
+Disp "Angle F is applied=",θ
+Pause
+Goto 2D
+Lbl 2H
+ClrHome
+Input "Angle F is applied= ",θ
+Input "Distance F is applied= ",D
+((U)/(Dcos(θ))→F
+Disp "Mag. of Applied Force=",F
+Pause 
+Goto 2D
+Lbl 2F
+ClrHome
+Input "Angle F is applied= ",θ
+Input "Mag. of Applied F ",F
+((U)/(Fcos(θ))→D
+Disp "Distance F is applied",D
+Pause 
+Goto 2D
+Lbl 3A
+Menu("Select variable to calc","Horizontal Distance",3Y,"Time to hit ground",3X,"Height of Launch",3W,"Initial Velocity",3V,"Angle of Launch",3U,"Impact Speed",7Z,"Back",2D
+Lbl 7Z
+Menu("What do u want?","Horizontal Vel",7Y,"Vertical Vel",7X,"Speed",7W,"KE on impact",7V,"Back",3A
+Lbl 7V
+ClrHome
+Disp "Set Acc. Gravity="
+Output(19,1,G)
+Input "Mass= ",M
+Input "Launch Vel= ",V
+Input "Launch Height= ",H
+((M)(­G)(H))+(.5)(M)(V^2)→K
+Disp "---","KE on impact",K
+Pause 
+Goto 7Z
+Lbl 7Y
+ClrHome
+Disp "Set Acc. Gravity="
+Output(19,1,G)
+Input "Launch Vel= ",V
+Input "Angle of Launch= ",θ
+Vcos(θ)→X
+Disp "Horizontal Vel","on impact",X
+Pause 
+Goto 7Z
+Lbl 7X
+ClrHome
+Disp "Set Acc. Gravity="
+Output(19,1,G)
+Input "Launch Height= ",H
+Input "Lauch Velocity= ",V
+Input "Angle of Launch= ",θ
+(Vsin(θ))→Y
+(­G)→M
+(Y²)→W
+(2MH)→R
+(√(W+R))→E
+((Y+E)/(M))→T
+((T)(G))→J
+(Y+J)→S
+ClrHome
+Disp "Vertical Velocity","on impact=",S
+Pause 
+Goto 7Z
+Lbl 7W
+ClrHome
+Disp "Set Acc. Gravity="
+Output(19,1,G)
+Input "Launch Height= ",H
+Input "Lauch Velocity= ",V
+Input "Angle of Launch= ",θ
+Vcos(θ)→X
+(Vsin(θ))→Y
+(­G)→M
+(Y²)→W
+(2MH)→R
+(√(W+R))→E
+((Y+E)/(M))→T
+((T)(G))→J
+(Y+J)→S
+√((S^2)+(X^2))→B
+Disp "---","Speed on impact",B
+Pause 
+Goto 7Z
+Lbl 3Y
+ClrHome
+Disp "Set Acc. Gravity="
+Output(19,1,G)
+Input "Initial Height= ",K
+Input "Launch Vel= ",V
+Input "Launch Angle= ",θ
+Disp "--","Calculating...","--"
+(Vsin(θ))→Y
+(­G)→M
+(Y²)→W
+(2MK)→R
+(√(W+R))→E
+((Y+E)/(M))→T
+((Vcos(θ))(T))→X
+Wait 1
+Disp "Horizontal Distance X","from x=0 is...",X
+Pause 
+Goto 2D
+
+Lbl 3X
+ClrHome
+Disp "Do you know","launch height?","---"
+Input "Yes=1,No=0... ",B
+If B=0
+Then:
+Input "X distance= ",X
+Input "Initial Velocity= ",V
+Input "Angle of Launch= ",θ
+((X)/(Vcos(θ)))→T
+(­(((T^2)(G))/(2))→H
+ClrHome
+Disp "Set Acc. Gravity="
+Output(19,1,G)
+Disp "Time to impact=",T
+Output(3,20,"seconds")
+Output(5,1,"Launch Height="
+Output(6,17,H)
+Output(7,21,"meters")
+Pause 
+Goto 2D
+Else
+Input "Launch Height= ",H
+Input "Initial Velocity= ",V
+Input "Angle of Launch= ",θ
+(Vsin(θ))→Y
+(­G)→M
+(Y²)→W
+(2MH)→R
+(√(W+R))→E
+((Y+E)/(M))→T
+ClrHome
+Disp "Set Acc. Gravity="
+Output(19,1,G)
+Disp "Time to impact=",T
+Output(3,20,"seconds")
+Pause 
+Goto 2D
+Lbl 3W
+ClrHome
+Disp "Set Acc. Gravity="
+Output(19,1,G)
+Input "Horizontal Displacement= ",X
+Input "Launch Velocity= ",V
+Input "Angle of Launch= ",θ
+(­G)→M
+(M/2)→A
+(Vcos(θ))→I
+(X/I)→B
+(Vsin(θ))→C
+((CB))→Q
+(AB²)→D
+abs((Q-D))→H
+Disp "Calculating..."
+Wait 1
+Disp "Launch Height=",H
+Pause 
+Goto 2D
+Lbl 3V
+ClrHome
+Disp "Set Acc. Gravity="
+Output(19,1,G)
+Input "Launch Height= ",H
+Input "Horizontal Distance= ",X
+Input "Launch Angle= ",V
+(­G)→M
+(X²M)→A
+(2cos(θ))→B
+(Xsin(θ))→C
+(Kcos(θ))→D
+(C+D)→E
+(BE)→Q
+(A/Q)→S
+(√(S))→V
+Disp "One Second Please..."
+Wait 1
+Disp "Launch Velocity=",V
+Pause 
+Goto 2D
+Lbl 3U
+ClrHome
+Disp "Set Acc. Gravity="
+Output(19,1,G)
+(­G)→M
+Input "Launch X Cord. = ",H
+Input "Launch Y Cord. = ",K
+Input "Initial Velocity= ",V
+Input "Final Displacement (X)= ",X
+(V²)→S
+(2KS)→E
+(V^4)→I
+(X-H)→F
+(MF²)→Q
+(E-Q)→L
+√((ML)+I)→J
+(J+S)→P
+(­(P)/(MF))→O
+abs(tan(O))→θ
+(S-J)→P
+(­(P)/(MF))→O
+abs(tan(O))→Z
+Disp "Calculating Launch Angles...","-------"
+Wait 1
+Disp "Angle 1=",θ
+Wait .5
+Disp "Angle 2=",Z
+Pause 
+Goto 2D
+
+Lbl 3C
+ClrHome
+Disp "Vectors!","If you receive 'Error","means that the","vectors add to 0"
+Wait 1.9
+ClrHome
+Menu("How Many Vectors?","Two",3H,"Three",3I,"Back",3
+Lbl 3H
+ClrHome
+Disp "Vector 1 -"
+Input "Vector θ= ",θ
+Input "Vector Magnitude= ",M
+Wait .5
+Disp "-----","Vector 2 -"
+Input "Vector θ= ",D
+Input "Vector Magnitude= ",C
+ClrHome
+Disp "Calculating..."
+Wait 1
+(Mcos(θ))→W
+(Msin(θ))→V
+(Ccos(D))→X
+(Csin(D))→Y
+(W+X)→A
+(V+Y)→B
+√((A^2)+(B^2))→M
+tan(B/A)→θ
+ClrHome
+Disp "Resultant Vector Magnitude=",M
+Disp "Standard Angle=",θ
+Pause 
+Goto 2D
+Lbl 3I
+ClrHome
+Input "Vector θ= ",θ
+Input "Vector Magnitude= ",M
+Wait .5
+Disp "-----","Vector 2 -"
+Input "Vector θ= ",D
+Input "Vector Magnitude= ",C
+Wait .5
+Disp "-----","Vector 3 -"
+Input "Vector θ= ",U
+Input "Vector Magnitude= ",K
+(Mcos(θ))→W
+(Msin(θ))→V
+(Ccos(D))→X
+(Csin(D))→Y
+(Kcos(U))→T
+(Ksin(U))→S
+(W+X+T)→A
+(V+Y+S)→B
+√((A^2)+(B^2))→M
+tan(B/A)→θ
+ClrHome
+Disp "Resultant Vector Magnitude=",M
+Disp "Standard Angle=",θ
+Pause 
+Goto 2D
+
+Lbl 3D
+Menu("Two Options:","Normal Grav. Force",3F,"Compared to Earth Calc.",3G,"Back",2D
+Lbl 3F
+ClrHome
+((6.67408)*(10^­11))→J
+Input "Mass 1(kg)= ",M
+Input "Mass 2(kg)= ",N
+Input "Distance(m)= ",R
+(((J)(M)(N))/(R^2))→F
+(F/M)→A
+(F/N)→B
+ClrHome
+Disp "----","Force(N)",F,"--","Accel. of Mass 1(m/s²)=",A,"--","Accel. of Mass 2(m/s²)",B,"--"
+Pause 
+Goto 2D
+Lbl 3G
+ClrHome
+Input "Mass Compared to Earth= ",M
+Input "Radius Compared to Earth= ",R
+(((M)/(R^2))(­G))→A
+Disp "--","Accel. at radius=",A
+Output(8,21,"m/s²"
+Pause 
+Goto 2D
+Lbl 3
+Menu("Forces!","Resultant Vector Calc",3C,"Gravitational Field",3D,"Back",2D
