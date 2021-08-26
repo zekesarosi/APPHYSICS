@@ -6,7 +6,7 @@ This program is capable of solving for variables in Kinematics, Energy/Work, Mom
 On top of this you can do Vector Sums, and there is a short list of equations that are invaluable for the test but do not appear on the equation sheet.
 
 This program comes in two parts, the main program, APHYSICS, and KINEMATS a secondary program. You must install both these programs onto your calculator
-in order for the program to work but when running the program select the one named APHYSICS, this will forward you to the main menu. 
+in order for the program to work. When running the program select the one named APHYSICS, this will forward you to the main menu. 
 
 Know that this program is designed for SI Units and that it's easy to encounter errors if attempting to use other units.
 
