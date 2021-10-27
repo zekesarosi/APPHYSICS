@@ -229,7 +229,7 @@ Disp "---","Initial KE=",K,"Final KE=",J,"Colition is elastic!","---","Change in
 Pause 
 Goto 2D
 Else:
-Disp "---","Initial KE=",K,"Final KE=",J,"Colition is inelastic!","---","Change in KE=",O
+Disp "---","Initial KE=",J,"Final KE=",K,"Colition is inelastic!","---","Change in KE=",O
 Pause 
 Goto 2D
 
